@@ -12,9 +12,12 @@
 		96858B822AC3FA8C00DD96D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96858B812AC3FA8C00DD96D6 /* Assets.xcassets */; };
 		96858B852AC3FA8C00DD96D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96858B832AC3FA8C00DD96D6 /* LaunchScreen.storyboard */; };
 		96858B882AC3FA8C00DD96D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96858B872AC3FA8C00DD96D6 /* main.m */; };
+		B5C6EE6BB3F55633B8835384 /* Pods_86Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466C32756CCF5BA692523B82 /* Pods_86Chat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2356F88B22CB49DB873BD368 /* Pods-86Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-86Chat.release.xcconfig"; path = "Target Support Files/Pods-86Chat/Pods-86Chat.release.xcconfig"; sourceTree = "<group>"; };
+		466C32756CCF5BA692523B82 /* Pods_86Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_86Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96858B722AC3FA8A00DD96D6 /* 86Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 86Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96858B752AC3FA8A00DD96D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96858B762AC3FA8A00DD96D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -23,6 +26,7 @@
 		96858B842AC3FA8C00DD96D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96858B862AC3FA8C00DD96D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96858B872AC3FA8C00DD96D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BB7143A6F8B87DC345AC1A8 /* Pods-86Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-86Chat.debug.xcconfig"; path = "Target Support Files/Pods-86Chat/Pods-86Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C6EE6BB3F55633B8835384 /* Pods_86Chat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +46,8 @@
 			children = (
 				96858B742AC3FA8A00DD96D6 /* 86Chat */,
 				96858B732AC3FA8A00DD96D6 /* Products */,
+				EDDA7B515959CFFDBE71A858 /* Pods */,
+				FAF8C162F914096BB916AB41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +73,24 @@
 			path = 86Chat;
 			sourceTree = "<group>";
 		};
+		EDDA7B515959CFFDBE71A858 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BB7143A6F8B87DC345AC1A8 /* Pods-86Chat.debug.xcconfig */,
+				2356F88B22CB49DB873BD368 /* Pods-86Chat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FAF8C162F914096BB916AB41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				466C32756CCF5BA692523B82 /* Pods_86Chat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -73,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96858B8B2AC3FA8C00DD96D6 /* Build configuration list for PBXNativeTarget "86Chat" */;
 			buildPhases = (
+				EBA2AF340DE9913AFD9B2BBA /* [CP] Check Pods Manifest.lock */,
 				96858B6E2AC3FA8A00DD96D6 /* Sources */,
 				96858B6F2AC3FA8A00DD96D6 /* Frameworks */,
 				96858B702AC3FA8A00DD96D6 /* Resources */,
+				DFE3F78BE4A6F662080506CA /* [CP] Embed Pods Frameworks */,
+				89600426A3DE60F76AF94FF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +158,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89600426A3DE60F76AF94FF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-86Chat/Pods-86Chat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-86Chat/Pods-86Chat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-86Chat/Pods-86Chat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFE3F78BE4A6F662080506CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-86Chat/Pods-86Chat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-86Chat/Pods-86Chat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-86Chat/Pods-86Chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBA2AF340DE9913AFD9B2BBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-86Chat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96858B6E2AC3FA8A00DD96D6 /* Sources */ = {
@@ -275,6 +362,7 @@
 		};
 		96858B8C2AC3FA8C00DD96D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BB7143A6F8B87DC345AC1A8 /* Pods-86Chat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +394,7 @@
 		};
 		96858B8D2AC3FA8C00DD96D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2356F88B22CB49DB873BD368 /* Pods-86Chat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,6 @@
+framework module KLNetworkOC {
+  umbrella header "KLNetworkOC-umbrella.h"
+
+  export *
+  module * { export * }
+}
