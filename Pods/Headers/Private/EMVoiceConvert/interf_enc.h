@@ -1,1 +1,0 @@
-../../../EMVoiceConvert/EMVoiceConvert/include/opencore-amrnb/interf_enc.h

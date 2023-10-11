@@ -10,7 +10,7 @@ pod 'MJExtension'
 pod 'SDWebImage'
 pod 'IQKeyboardManager'
 
-pod 'HyphenateChat'
-pod 'EaseIMKit'
+pod 'HyphenateChat' # 环信的SDK
+
 
 end

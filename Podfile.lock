@@ -14,10 +14,6 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - EaseIMKit (4.1.0):
-    - EMVoiceConvert (= 0.1.0)
-    - HyphenateChat (~> 4.1.0)
-  - EMVoiceConvert (0.1.0)
   - HyphenateChat (4.1.1)
   - IQKeyboardManager (6.5.12)
   - KLNetworkOC (1.0.0):
@@ -32,7 +28,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - EaseIMKit
   - HyphenateChat
   - IQKeyboardManager
   - KLNetworkOC
@@ -43,8 +38,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
-    - EaseIMKit
-    - EMVoiceConvert
     - HyphenateChat
     - IQKeyboardManager
     - KLNetworkOC
@@ -55,8 +48,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
-  EaseIMKit: dc346d178aeef5df0d7a0b6c212f93edc672d758
-  EMVoiceConvert: 32a0eaada94d93c151a5abd53ee174cd4e63b01f
   HyphenateChat: 95aa4abbad0e763f513acbe21ff9543f50b886cd
   IQKeyboardManager: b1fd66ccf7a79095bdcc4a2735231586f744216e
   KLNetworkOC: 9599c90602573f3f3f49f43a55f9319b0453748b
@@ -65,6 +56,6 @@ SPEC CHECKSUMS:
   SDWebImage: 2aea163b50bfcb569a2726b6a754c54a4506fcf6
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: ed58b62d416d551dcac9cb9e47df35c06a85f97b
+PODFILE CHECKSUM: 4ea3e0f2fac2da520480ad9a19a3b4c47fd51d1b
 
 COCOAPODS: 1.11.2

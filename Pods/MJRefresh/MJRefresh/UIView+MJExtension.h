@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) CGFloat mj_h;
 @property (assign, nonatomic) CGSize mj_size;
 @property (assign, nonatomic) CGPoint mj_origin;
+
+- (void)exChangeOutDur;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -1,6 +1,0 @@
-framework module EaseIMKit {
-  umbrella header "EaseIMKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -7,17 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9655EA2E2AC5514700A60F17 /* EGSIXCHATMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655EA2D2AC5514700A60F17 /* EGSIXCHATMainVC.m */; };
+		9655EA312AC5516100A60F17 /* EGSIXCHATTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655EA302AC5516100A60F17 /* EGSIXCHATTabBarVC.m */; };
+		9655EA372AC5525F00A60F17 /* EGSIXCHATLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655EA352AC5525F00A60F17 /* EGSIXCHATLoginVC.m */; };
+		9655EA382AC5525F00A60F17 /* EGSIXCHATLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9655EA362AC5525F00A60F17 /* EGSIXCHATLoginVC.xib */; };
+		9655EA3D2AC5528100A60F17 /* EGSIXCHATRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655EA3B2AC5528100A60F17 /* EGSIXCHATRegisterVC.m */; };
+		9655EA3E2AC5528100A60F17 /* EGSIXCHATRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9655EA3C2AC5528100A60F17 /* EGSIXCHATRegisterVC.xib */; };
+		9655EA4D2AC5557600A60F17 /* UIColor+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655EA482AC5557600A60F17 /* UIColor+Gradient.m */; };
+		9655EA4F2AC5557600A60F17 /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655EA4A2AC5557600A60F17 /* UICollectionViewLeftAlignedLayout.m */; };
+		9655EA502AC5557600A60F17 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655EA4C2AC5557600A60F17 /* NSString+Extension.m */; };
+		96846AC92AD4F40500CBA266 /* HESIXCGATMessageTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96846AC72AD4F40500CBA266 /* HESIXCGATMessageTVCell.m */; };
+		96846ACA2AD4F40500CBA266 /* HESIXCGATMessageTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96846AC82AD4F40500CBA266 /* HESIXCGATMessageTVCell.xib */; };
+		96846ACE2AD4F44D00CBA266 /* ObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96846ACD2AD4F44D00CBA266 /* ObjectModel.m */; };
+		96846AD22AD5058D00CBA266 /* MessageAddPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96846AD12AD5058D00CBA266 /* MessageAddPopView.m */; };
+		96846AD42AD5059400CBA266 /* MessageAddPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96846AD32AD5059400CBA266 /* MessageAddPopView.xib */; };
+		96846ADA2AD528D100CBA266 /* HESIXCGATContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96846AD82AD528D100CBA266 /* HESIXCGATContactVC.m */; };
+		96846ADB2AD528D100CBA266 /* HESIXCGATContactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96846AD92AD528D100CBA266 /* HESIXCGATContactVC.xib */; };
+		96846AE12AD538E100CBA266 /* HESIXCGATAddFriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96846ADF2AD538E100CBA266 /* HESIXCGATAddFriendVC.m */; };
+		96846AE22AD538E100CBA266 /* HESIXCGATAddFriendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96846AE02AD538E100CBA266 /* HESIXCGATAddFriendVC.xib */; };
+		96846AE72AD5489C00CBA266 /* HESIXCGATSearchFriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96846AE52AD5489C00CBA266 /* HESIXCGATSearchFriendVC.m */; };
+		96846AE82AD5489C00CBA266 /* HESIXCGATSearchFriendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96846AE62AD5489C00CBA266 /* HESIXCGATSearchFriendVC.xib */; };
+		96846AEC2AD5500000CBA266 /* HESIXCGATQrcodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96846AEB2AD5500000CBA266 /* HESIXCGATQrcodeVC.m */; };
+		96846AFB2AD66AF300CBA266 /* QiCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96846AF82AD66AF200CBA266 /* QiCodeManager.m */; };
+		96846AFC2AD66AF300CBA266 /* QiCodePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96846AFA2AD66AF300CBA266 /* QiCodePreviewView.m */; };
 		96858B772AC3FA8A00DD96D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96858B762AC3FA8A00DD96D6 /* AppDelegate.m */; };
 		96858B802AC3FA8A00DD96D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96858B7E2AC3FA8A00DD96D6 /* Main.storyboard */; };
 		96858B822AC3FA8C00DD96D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96858B812AC3FA8C00DD96D6 /* Assets.xcassets */; };
 		96858B852AC3FA8C00DD96D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96858B832AC3FA8C00DD96D6 /* LaunchScreen.storyboard */; };
 		96858B882AC3FA8C00DD96D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96858B872AC3FA8C00DD96D6 /* main.m */; };
+		96B83F932AD2AC9200127123 /* RequestTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B83F922AD2AC9200127123 /* RequestTools.m */; };
+		96B83F982AD2B01400127123 /* EGSIXCHATProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B83F962AD2B01400127123 /* EGSIXCHATProtocolVC.m */; };
+		96B83F992AD2B01400127123 /* EGSIXCHATProtocolVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B83F972AD2B01400127123 /* EGSIXCHATProtocolVC.xib */; };
+		96B83F9E2AD2B4DA00127123 /* HESIXCGATMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B83F9C2AD2B4DA00127123 /* HESIXCGATMessageVC.m */; };
+		96B83F9F2AD2B4DA00127123 /* HESIXCGATMessageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B83F9D2AD2B4DA00127123 /* HESIXCGATMessageVC.xib */; };
+		96B83FA32AD2B8DF00127123 /* UserDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B83FA22AD2B8DF00127123 /* UserDataModel.m */; };
 		B5C6EE6BB3F55633B8835384 /* Pods_86Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466C32756CCF5BA692523B82 /* Pods_86Chat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2356F88B22CB49DB873BD368 /* Pods-86Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-86Chat.release.xcconfig"; path = "Target Support Files/Pods-86Chat/Pods-86Chat.release.xcconfig"; sourceTree = "<group>"; };
 		466C32756CCF5BA692523B82 /* Pods_86Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_86Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9655EA2C2AC5514700A60F17 /* EGSIXCHATMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGSIXCHATMainVC.h; sourceTree = "<group>"; };
+		9655EA2D2AC5514700A60F17 /* EGSIXCHATMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGSIXCHATMainVC.m; sourceTree = "<group>"; };
+		9655EA2F2AC5516100A60F17 /* EGSIXCHATTabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGSIXCHATTabBarVC.h; sourceTree = "<group>"; };
+		9655EA302AC5516100A60F17 /* EGSIXCHATTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGSIXCHATTabBarVC.m; sourceTree = "<group>"; };
+		9655EA342AC5525F00A60F17 /* EGSIXCHATLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGSIXCHATLoginVC.h; sourceTree = "<group>"; };
+		9655EA352AC5525F00A60F17 /* EGSIXCHATLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGSIXCHATLoginVC.m; sourceTree = "<group>"; };
+		9655EA362AC5525F00A60F17 /* EGSIXCHATLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EGSIXCHATLoginVC.xib; sourceTree = "<group>"; };
+		9655EA3A2AC5528100A60F17 /* EGSIXCHATRegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGSIXCHATRegisterVC.h; sourceTree = "<group>"; };
+		9655EA3B2AC5528100A60F17 /* EGSIXCHATRegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGSIXCHATRegisterVC.m; sourceTree = "<group>"; };
+		9655EA3C2AC5528100A60F17 /* EGSIXCHATRegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EGSIXCHATRegisterVC.xib; sourceTree = "<group>"; };
+		9655EA402AC5537800A60F17 /* APIMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIMacro.h; sourceTree = "<group>"; };
+		9655EA412AC553FF00A60F17 /* EGSIXDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGSIXDefine.h; sourceTree = "<group>"; };
+		9655EA422AC554C300A60F17 /* EGSIXPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGSIXPrefixHeader.pch; sourceTree = "<group>"; };
+		9655EA452AC5557600A60F17 /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
+		9655EA472AC5557600A60F17 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		9655EA482AC5557600A60F17 /* UIColor+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Gradient.m"; sourceTree = "<group>"; };
+		9655EA4A2AC5557600A60F17 /* UICollectionViewLeftAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewLeftAlignedLayout.m; sourceTree = "<group>"; };
+		9655EA4B2AC5557600A60F17 /* UIColor+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Gradient.h"; sourceTree = "<group>"; };
+		9655EA4C2AC5557600A60F17 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		96846AC62AD4F40500CBA266 /* HESIXCGATMessageTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HESIXCGATMessageTVCell.h; sourceTree = "<group>"; };
+		96846AC72AD4F40500CBA266 /* HESIXCGATMessageTVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HESIXCGATMessageTVCell.m; sourceTree = "<group>"; };
+		96846AC82AD4F40500CBA266 /* HESIXCGATMessageTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HESIXCGATMessageTVCell.xib; sourceTree = "<group>"; };
+		96846ACC2AD4F44D00CBA266 /* ObjectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectModel.h; sourceTree = "<group>"; };
+		96846ACD2AD4F44D00CBA266 /* ObjectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectModel.m; sourceTree = "<group>"; };
+		96846AD02AD5058D00CBA266 /* MessageAddPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageAddPopView.h; sourceTree = "<group>"; };
+		96846AD12AD5058D00CBA266 /* MessageAddPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageAddPopView.m; sourceTree = "<group>"; };
+		96846AD32AD5059400CBA266 /* MessageAddPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageAddPopView.xib; sourceTree = "<group>"; };
+		96846AD72AD528D100CBA266 /* HESIXCGATContactVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HESIXCGATContactVC.h; sourceTree = "<group>"; };
+		96846AD82AD528D100CBA266 /* HESIXCGATContactVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HESIXCGATContactVC.m; sourceTree = "<group>"; };
+		96846AD92AD528D100CBA266 /* HESIXCGATContactVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HESIXCGATContactVC.xib; sourceTree = "<group>"; };
+		96846ADE2AD538E100CBA266 /* HESIXCGATAddFriendVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HESIXCGATAddFriendVC.h; sourceTree = "<group>"; };
+		96846ADF2AD538E100CBA266 /* HESIXCGATAddFriendVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HESIXCGATAddFriendVC.m; sourceTree = "<group>"; };
+		96846AE02AD538E100CBA266 /* HESIXCGATAddFriendVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HESIXCGATAddFriendVC.xib; sourceTree = "<group>"; };
+		96846AE42AD5489C00CBA266 /* HESIXCGATSearchFriendVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HESIXCGATSearchFriendVC.h; sourceTree = "<group>"; };
+		96846AE52AD5489C00CBA266 /* HESIXCGATSearchFriendVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HESIXCGATSearchFriendVC.m; sourceTree = "<group>"; };
+		96846AE62AD5489C00CBA266 /* HESIXCGATSearchFriendVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HESIXCGATSearchFriendVC.xib; sourceTree = "<group>"; };
+		96846AEA2AD5500000CBA266 /* HESIXCGATQrcodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HESIXCGATQrcodeVC.h; sourceTree = "<group>"; };
+		96846AEB2AD5500000CBA266 /* HESIXCGATQrcodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HESIXCGATQrcodeVC.m; sourceTree = "<group>"; };
+		96846AF72AD66AF200CBA266 /* QiCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiCodeManager.h; sourceTree = "<group>"; };
+		96846AF82AD66AF200CBA266 /* QiCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiCodeManager.m; sourceTree = "<group>"; };
+		96846AF92AD66AF300CBA266 /* QiCodePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiCodePreviewView.h; sourceTree = "<group>"; };
+		96846AFA2AD66AF300CBA266 /* QiCodePreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiCodePreviewView.m; sourceTree = "<group>"; };
 		96858B722AC3FA8A00DD96D6 /* 86Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 86Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96858B752AC3FA8A00DD96D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96858B762AC3FA8A00DD96D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +97,17 @@
 		96858B842AC3FA8C00DD96D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96858B862AC3FA8C00DD96D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96858B872AC3FA8C00DD96D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96B83F8E2AD1429300127123 /* EGSIXConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGSIXConstant.h; sourceTree = "<group>"; };
+		96B83F912AD2AC9200127123 /* RequestTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestTools.h; sourceTree = "<group>"; };
+		96B83F922AD2AC9200127123 /* RequestTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestTools.m; sourceTree = "<group>"; };
+		96B83F952AD2B01400127123 /* EGSIXCHATProtocolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGSIXCHATProtocolVC.h; sourceTree = "<group>"; };
+		96B83F962AD2B01400127123 /* EGSIXCHATProtocolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGSIXCHATProtocolVC.m; sourceTree = "<group>"; };
+		96B83F972AD2B01400127123 /* EGSIXCHATProtocolVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EGSIXCHATProtocolVC.xib; sourceTree = "<group>"; };
+		96B83F9B2AD2B4DA00127123 /* HESIXCGATMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HESIXCGATMessageVC.h; sourceTree = "<group>"; };
+		96B83F9C2AD2B4DA00127123 /* HESIXCGATMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HESIXCGATMessageVC.m; sourceTree = "<group>"; };
+		96B83F9D2AD2B4DA00127123 /* HESIXCGATMessageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HESIXCGATMessageVC.xib; sourceTree = "<group>"; };
+		96B83FA12AD2B8DF00127123 /* UserDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDataModel.h; sourceTree = "<group>"; };
+		96B83FA22AD2B8DF00127123 /* UserDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDataModel.m; sourceTree = "<group>"; };
 		9BB7143A6F8B87DC345AC1A8 /* Pods-86Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-86Chat.debug.xcconfig"; path = "Target Support Files/Pods-86Chat/Pods-86Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +123,172 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9655EA322AC5522E00A60F17 /* EGCHAT */ = {
+			isa = PBXGroup;
+			children = (
+				9655EA3F2AC5531F00A60F17 /* EGSIXDefine */,
+				9655EA432AC5556A00A60F17 /* EGSIXTools */,
+				96B83F8F2AD2883B00127123 /* MVC */,
+			);
+			path = EGCHAT;
+			sourceTree = "<group>";
+		};
+		9655EA332AC5523700A60F17 /* EgsixLogin */ = {
+			isa = PBXGroup;
+			children = (
+				96B83F942AD2AFF500127123 /* EgsixProtocol */,
+				9655EA392AC5526B00A60F17 /* EgsixRegister */,
+				9655EA342AC5525F00A60F17 /* EGSIXCHATLoginVC.h */,
+				9655EA352AC5525F00A60F17 /* EGSIXCHATLoginVC.m */,
+				9655EA362AC5525F00A60F17 /* EGSIXCHATLoginVC.xib */,
+			);
+			path = EgsixLogin;
+			sourceTree = "<group>";
+		};
+		9655EA392AC5526B00A60F17 /* EgsixRegister */ = {
+			isa = PBXGroup;
+			children = (
+				9655EA3A2AC5528100A60F17 /* EGSIXCHATRegisterVC.h */,
+				9655EA3B2AC5528100A60F17 /* EGSIXCHATRegisterVC.m */,
+				9655EA3C2AC5528100A60F17 /* EGSIXCHATRegisterVC.xib */,
+			);
+			path = EgsixRegister;
+			sourceTree = "<group>";
+		};
+		9655EA3F2AC5531F00A60F17 /* EGSIXDefine */ = {
+			isa = PBXGroup;
+			children = (
+				9655EA402AC5537800A60F17 /* APIMacro.h */,
+				9655EA412AC553FF00A60F17 /* EGSIXDefine.h */,
+				96B83F8E2AD1429300127123 /* EGSIXConstant.h */,
+				9655EA422AC554C300A60F17 /* EGSIXPrefixHeader.pch */,
+			);
+			path = EGSIXDefine;
+			sourceTree = "<group>";
+		};
+		9655EA432AC5556A00A60F17 /* EGSIXTools */ = {
+			isa = PBXGroup;
+			children = (
+				96846ACB2AD4F43A00CBA266 /* ObjectModel */,
+				96B83FA02AD2B8C700127123 /* UserData */,
+				96B83F902AD2AC3B00127123 /* RequestTools */,
+				9655EA442AC5557600A60F17 /* Extension */,
+				96846ACF2AD5044B00CBA266 /* PopView */,
+			);
+			path = EGSIXTools;
+			sourceTree = "<group>";
+		};
+		9655EA442AC5557600A60F17 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9655EA4B2AC5557600A60F17 /* UIColor+Gradient.h */,
+				9655EA482AC5557600A60F17 /* UIColor+Gradient.m */,
+				9655EA472AC5557600A60F17 /* NSString+Extension.h */,
+				9655EA4C2AC5557600A60F17 /* NSString+Extension.m */,
+				9655EA452AC5557600A60F17 /* UICollectionViewLeftAlignedLayout.h */,
+				9655EA4A2AC5557600A60F17 /* UICollectionViewLeftAlignedLayout.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		96846AC52AD4F3F000CBA266 /* EgsixMessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				96846AC62AD4F40500CBA266 /* HESIXCGATMessageTVCell.h */,
+				96846AC72AD4F40500CBA266 /* HESIXCGATMessageTVCell.m */,
+				96846AC82AD4F40500CBA266 /* HESIXCGATMessageTVCell.xib */,
+			);
+			path = EgsixMessageCell;
+			sourceTree = "<group>";
+		};
+		96846ACB2AD4F43A00CBA266 /* ObjectModel */ = {
+			isa = PBXGroup;
+			children = (
+				96846ACC2AD4F44D00CBA266 /* ObjectModel.h */,
+				96846ACD2AD4F44D00CBA266 /* ObjectModel.m */,
+			);
+			path = ObjectModel;
+			sourceTree = "<group>";
+		};
+		96846ACF2AD5044B00CBA266 /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				96846AD52AD514DB00CBA266 /* MessagePopView */,
+			);
+			path = PopView;
+			sourceTree = "<group>";
+		};
+		96846AD52AD514DB00CBA266 /* MessagePopView */ = {
+			isa = PBXGroup;
+			children = (
+				96846AD02AD5058D00CBA266 /* MessageAddPopView.h */,
+				96846AD12AD5058D00CBA266 /* MessageAddPopView.m */,
+				96846AD32AD5059400CBA266 /* MessageAddPopView.xib */,
+			);
+			path = MessagePopView;
+			sourceTree = "<group>";
+		};
+		96846AD62AD5289800CBA266 /* EgsixContact(All好友) */ = {
+			isa = PBXGroup;
+			children = (
+				96846AD72AD528D100CBA266 /* HESIXCGATContactVC.h */,
+				96846AD82AD528D100CBA266 /* HESIXCGATContactVC.m */,
+				96846AD92AD528D100CBA266 /* HESIXCGATContactVC.xib */,
+				96846ADC2AD528E500CBA266 /* EgsixContactCell */,
+			);
+			path = "EgsixContact(All好友)";
+			sourceTree = "<group>";
+		};
+		96846ADC2AD528E500CBA266 /* EgsixContactCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EgsixContactCell;
+			sourceTree = "<group>";
+		};
+		96846ADD2AD5388800CBA266 /* EgsixAddFriend */ = {
+			isa = PBXGroup;
+			children = (
+				96846AE92AD54FE400CBA266 /* EgsixQrcode */,
+				96846AE32AD5483900CBA266 /* EgsixSearchFriend */,
+				96846ADE2AD538E100CBA266 /* HESIXCGATAddFriendVC.h */,
+				96846ADF2AD538E100CBA266 /* HESIXCGATAddFriendVC.m */,
+				96846AE02AD538E100CBA266 /* HESIXCGATAddFriendVC.xib */,
+			);
+			path = EgsixAddFriend;
+			sourceTree = "<group>";
+		};
+		96846AE32AD5483900CBA266 /* EgsixSearchFriend */ = {
+			isa = PBXGroup;
+			children = (
+				96846AE42AD5489C00CBA266 /* HESIXCGATSearchFriendVC.h */,
+				96846AE52AD5489C00CBA266 /* HESIXCGATSearchFriendVC.m */,
+				96846AE62AD5489C00CBA266 /* HESIXCGATSearchFriendVC.xib */,
+			);
+			path = EgsixSearchFriend;
+			sourceTree = "<group>";
+		};
+		96846AE92AD54FE400CBA266 /* EgsixQrcode */ = {
+			isa = PBXGroup;
+			children = (
+				96846AED2AD5535600CBA266 /* QiCodeReader */,
+				96846AEA2AD5500000CBA266 /* HESIXCGATQrcodeVC.h */,
+				96846AEB2AD5500000CBA266 /* HESIXCGATQrcodeVC.m */,
+			);
+			path = EgsixQrcode;
+			sourceTree = "<group>";
+		};
+		96846AED2AD5535600CBA266 /* QiCodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				96846AF72AD66AF200CBA266 /* QiCodeManager.h */,
+				96846AF82AD66AF200CBA266 /* QiCodeManager.m */,
+				96846AF92AD66AF300CBA266 /* QiCodePreviewView.h */,
+				96846AFA2AD66AF300CBA266 /* QiCodePreviewView.m */,
+			);
+			path = QiCodeReader;
+			sourceTree = "<group>";
+		};
 		96858B692AC3FA8A00DD96D6 = {
 			isa = PBXGroup;
 			children = (
@@ -62,8 +310,13 @@
 		96858B742AC3FA8A00DD96D6 /* 86Chat */ = {
 			isa = PBXGroup;
 			children = (
+				9655EA322AC5522E00A60F17 /* EGCHAT */,
 				96858B752AC3FA8A00DD96D6 /* AppDelegate.h */,
 				96858B762AC3FA8A00DD96D6 /* AppDelegate.m */,
+				9655EA2C2AC5514700A60F17 /* EGSIXCHATMainVC.h */,
+				9655EA2D2AC5514700A60F17 /* EGSIXCHATMainVC.m */,
+				9655EA2F2AC5516100A60F17 /* EGSIXCHATTabBarVC.h */,
+				9655EA302AC5516100A60F17 /* EGSIXCHATTabBarVC.m */,
 				96858B7E2AC3FA8A00DD96D6 /* Main.storyboard */,
 				96858B812AC3FA8C00DD96D6 /* Assets.xcassets */,
 				96858B832AC3FA8C00DD96D6 /* LaunchScreen.storyboard */,
@@ -73,13 +326,62 @@
 			path = 86Chat;
 			sourceTree = "<group>";
 		};
+		96B83F8F2AD2883B00127123 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				96B83F9A2AD2B36B00127123 /* EgsixMessage */,
+				9655EA332AC5523700A60F17 /* EgsixLogin */,
+			);
+			name = MVC;
+			sourceTree = "<group>";
+		};
+		96B83F902AD2AC3B00127123 /* RequestTools */ = {
+			isa = PBXGroup;
+			children = (
+				96B83F912AD2AC9200127123 /* RequestTools.h */,
+				96B83F922AD2AC9200127123 /* RequestTools.m */,
+			);
+			path = RequestTools;
+			sourceTree = "<group>";
+		};
+		96B83F942AD2AFF500127123 /* EgsixProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				96B83F952AD2B01400127123 /* EGSIXCHATProtocolVC.h */,
+				96B83F962AD2B01400127123 /* EGSIXCHATProtocolVC.m */,
+				96B83F972AD2B01400127123 /* EGSIXCHATProtocolVC.xib */,
+			);
+			path = EgsixProtocol;
+			sourceTree = "<group>";
+		};
+		96B83F9A2AD2B36B00127123 /* EgsixMessage */ = {
+			isa = PBXGroup;
+			children = (
+				96846ADD2AD5388800CBA266 /* EgsixAddFriend */,
+				96846AD62AD5289800CBA266 /* EgsixContact(All好友) */,
+				96B83F9B2AD2B4DA00127123 /* HESIXCGATMessageVC.h */,
+				96B83F9C2AD2B4DA00127123 /* HESIXCGATMessageVC.m */,
+				96B83F9D2AD2B4DA00127123 /* HESIXCGATMessageVC.xib */,
+				96846AC52AD4F3F000CBA266 /* EgsixMessageCell */,
+			);
+			path = EgsixMessage;
+			sourceTree = "<group>";
+		};
+		96B83FA02AD2B8C700127123 /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				96B83FA12AD2B8DF00127123 /* UserDataModel.h */,
+				96B83FA22AD2B8DF00127123 /* UserDataModel.m */,
+			);
+			path = UserData;
+			sourceTree = "<group>";
+		};
 		EDDA7B515959CFFDBE71A858 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				9BB7143A6F8B87DC345AC1A8 /* Pods-86Chat.debug.xcconfig */,
 				2356F88B22CB49DB873BD368 /* Pods-86Chat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,7 +405,6 @@
 				96858B6F2AC3FA8A00DD96D6 /* Frameworks */,
 				96858B702AC3FA8A00DD96D6 /* Resources */,
 				DFE3F78BE4A6F662080506CA /* [CP] Embed Pods Frameworks */,
-				89600426A3DE60F76AF94FF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,31 +453,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				96858B852AC3FA8C00DD96D6 /* LaunchScreen.storyboard in Resources */,
+				96846AD42AD5059400CBA266 /* MessageAddPopView.xib in Resources */,
+				9655EA3E2AC5528100A60F17 /* EGSIXCHATRegisterVC.xib in Resources */,
+				96846AE22AD538E100CBA266 /* HESIXCGATAddFriendVC.xib in Resources */,
+				96846ACA2AD4F40500CBA266 /* HESIXCGATMessageTVCell.xib in Resources */,
+				96B83F9F2AD2B4DA00127123 /* HESIXCGATMessageVC.xib in Resources */,
 				96858B822AC3FA8C00DD96D6 /* Assets.xcassets in Resources */,
+				96846AE82AD5489C00CBA266 /* HESIXCGATSearchFriendVC.xib in Resources */,
 				96858B802AC3FA8A00DD96D6 /* Main.storyboard in Resources */,
+				9655EA382AC5525F00A60F17 /* EGSIXCHATLoginVC.xib in Resources */,
+				96846ADB2AD528D100CBA266 /* HESIXCGATContactVC.xib in Resources */,
+				96B83F992AD2B01400127123 /* EGSIXCHATProtocolVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		89600426A3DE60F76AF94FF2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-86Chat/Pods-86Chat-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-86Chat/Pods-86Chat-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-86Chat/Pods-86Chat-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DFE3F78BE4A6F662080506CA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,8 +516,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96846ADA2AD528D100CBA266 /* HESIXCGATContactVC.m in Sources */,
 				96858B772AC3FA8A00DD96D6 /* AppDelegate.m in Sources */,
+				96B83F9E2AD2B4DA00127123 /* HESIXCGATMessageVC.m in Sources */,
+				9655EA2E2AC5514700A60F17 /* EGSIXCHATMainVC.m in Sources */,
+				96846AE72AD5489C00CBA266 /* HESIXCGATSearchFriendVC.m in Sources */,
+				96B83F982AD2B01400127123 /* EGSIXCHATProtocolVC.m in Sources */,
+				9655EA3D2AC5528100A60F17 /* EGSIXCHATRegisterVC.m in Sources */,
+				96846AFB2AD66AF300CBA266 /* QiCodeManager.m in Sources */,
+				96B83F932AD2AC9200127123 /* RequestTools.m in Sources */,
+				96846AD22AD5058D00CBA266 /* MessageAddPopView.m in Sources */,
+				9655EA372AC5525F00A60F17 /* EGSIXCHATLoginVC.m in Sources */,
+				9655EA4D2AC5557600A60F17 /* UIColor+Gradient.m in Sources */,
+				9655EA502AC5557600A60F17 /* NSString+Extension.m in Sources */,
 				96858B882AC3FA8C00DD96D6 /* main.m in Sources */,
+				96846AFC2AD66AF300CBA266 /* QiCodePreviewView.m in Sources */,
+				96846ACE2AD4F44D00CBA266 /* ObjectModel.m in Sources */,
+				96846AC92AD4F40500CBA266 /* HESIXCGATMessageTVCell.m in Sources */,
+				9655EA4F2AC5557600A60F17 /* UICollectionViewLeftAlignedLayout.m in Sources */,
+				96846AE12AD538E100CBA266 /* HESIXCGATAddFriendVC.m in Sources */,
+				96846AEC2AD5500000CBA266 /* HESIXCGATQrcodeVC.m in Sources */,
+				9655EA312AC5516100A60F17 /* EGSIXCHATTabBarVC.m in Sources */,
+				96B83FA32AD2B8DF00127123 /* UserDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,9 +681,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/86Chat/EGCHAT/EGSIXDefine/EGSIXPrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 86Chat/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = 86Chat;
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要您打开相机，用于扫描二维码进行识别，是否允许？";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "需要您打开相册，用于更改用户头像，是否允许？";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -400,9 +716,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/86Chat/EGCHAT/EGSIXDefine/EGSIXPrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 86Chat/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = 86Chat;
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要您打开相机，用于扫描二维码进行识别，是否允许？";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "需要您打开相册，用于更改用户头像，是否允许？";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

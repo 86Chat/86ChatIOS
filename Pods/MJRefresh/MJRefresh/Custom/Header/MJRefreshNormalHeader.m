@@ -19,6 +19,17 @@
 @end
 
 @implementation MJRefreshNormalHeader
+
+/**
+ 自定义设置header
+ */
+- (void)customInitHeader {
+    self.automaticallyChangeAlpha = YES;
+    self.lastUpdatedTimeLabel.hidden = YES;
+    self.stateLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:13.0];
+    self.stateLabel.textColor = [UIColor colorWithRed:102.0/255.0 green:102.0/255.0 blue:102.0/255.0 alpha:1];
+}
+
 #pragma mark - 懒加载子控件
 - (UIImageView *)arrowView
 {

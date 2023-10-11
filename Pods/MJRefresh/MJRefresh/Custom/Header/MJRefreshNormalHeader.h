@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic, readonly) UIImageView *arrowView;
 @property (weak, nonatomic, readonly) UIActivityIndicatorView *loadingView;
 
+/**
+ 自定义设置header
+ */
+- (void)customInitHeader;
 
 /** 菊花的样式 */
 @property (assign, nonatomic) UIActivityIndicatorViewStyle activityIndicatorViewStyle MJRefreshDeprecated("first deprecated in 3.2.2 - Use `loadingView` property");

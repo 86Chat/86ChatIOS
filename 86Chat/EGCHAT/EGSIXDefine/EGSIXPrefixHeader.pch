@@ -1,0 +1,43 @@
+//
+//  EGSIXPrefixHeader.pch
+//  86Chat
+//
+//  Created by Rubyuer on 9/28/23.
+//
+
+#ifndef EGSIXPrefixHeader_pch
+#define EGSIXPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <KLNetworkOC/KLNetworkHandler.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/SDWebImageDownloader.h>
+#import <SDWebImage/SDImageCache.h>
+#import <MJExtension/MJExtension.h>
+#import <MJRefresh/MJRefresh.h>
+#import <HyphenateChat/HyphenateChat.h>
+//#import <EaseIMKit/EaseIMKit.h>
+
+#import "APIMacro.h"
+#import "EGSIXDefine.h"
+#import "EGSIXConstant.h"
+#import "RequestTools.h"
+
+#import "UIColor+Gradient.h"
+#import "NSString+Extension.h"
+
+
+#import "UserDataModel.h"
+#import "ObjectModel.h"
+
+
+
+
+
+
+
+
+#endif /* EGSIXPrefixHeader_pch */
