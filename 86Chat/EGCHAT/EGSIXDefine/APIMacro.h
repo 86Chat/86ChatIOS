@@ -13,10 +13,10 @@
 #define kVersionSuccess     @"VersionSuccess"
 
 //#define DEFAULT_URL @"test.uni-meta.com.cn"  // 默认测试环境
-#define DEFAULT_URL @"eapi.uni-meta.com.cn"  //
+#define DEFAULT_URL @"api.866chat.com"  //
 
 
-#define SERVER_URL  [NSString stringWithFormat:@"https://%@/api", [[NSUserDefaults standardUserDefaults] valueForKey:kBaseServerUrl]]
+#define SERVER_URL  [NSString stringWithFormat:@"http://%@", DEFAULT_URL]
 
 
 #define PATH(_path)    [NSString stringWithFormat:_path, SERVER_URL]
@@ -29,6 +29,10 @@
  */
 #define INDEX_VERSION   PATH(@"%@/index/version")
 
+/**
+ * 登录
+ */
+#define PUB_LOGIN   PATH(@"%@/common/pub/login")
 
 
 

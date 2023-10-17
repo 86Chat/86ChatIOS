@@ -37,10 +37,10 @@
     
 //    [EMClient.sharedClient logout:YES completion:^(EMError * _Nullable aError) {
         
-//        EMError *error = [EMClient.sharedClient loginWithUsername:@"test1" password:@"123456"];
-//        if (error != nil) {
-//            NSLog(@"%@",error.errorDescription);
-//        }
+        EMError *error = [EMClient.sharedClient loginWithUsername:@"test1" password:@"123456"];
+        if (error != nil) {
+            NSLog(@"%@",error.errorDescription);
+        }
 //    }];
 //        if (error != nil) {
 //            NSLog(@"%@",error.errorDescription);

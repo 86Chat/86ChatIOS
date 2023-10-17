@@ -41,6 +41,10 @@
 
 #define UNString(x, y) [NSString stringWithFormat:x, y]
 
+#define PINGFANG_M(s)    [UIFont fontWithName:@"PingFangSC-Medium" size:s];
+#define PINGFANG_R(s)    [UIFont fontWithName:@"PingFangSC-Regular" size:s];
+
+
 #define ViewBorderRadius(View, Radius, Width, Color)\
 \
 [View.layer setCornerRadius:(Radius)];\

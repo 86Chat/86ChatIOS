@@ -60,7 +60,7 @@
     rightButton.backgroundColor = UIColor.clearColor;
     [rightButton setTitle:title forState:UIControlStateNormal];
     [rightButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
-    rightButton.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:14.0];
+    rightButton.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:14.0];
     [rightButton addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     return rightButton;
 }

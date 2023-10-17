@@ -117,8 +117,9 @@
 /**
  *  多图片上传接口
  *
- *    @param imageArray       图片对象集合
- *  @param url              请求路径
+ *    @param images       图片对象集合
+ *    @param videos       视频对象集合
+ *    @param url              请求路径
  *    @param params           拼接参数
  *    @param progressBlock    上传进度
  *    @param successBlock     成功回调
@@ -126,13 +127,14 @@
  *
  *  @return 返回的对象中可取消请求
  */
-+ (KLURLSessionTask *)uploadWithImageArray:(NSMutableArray *)imageArray
-                                       url:(NSString *)url
-                                    params:(NSDictionary *)params
-                                   showHUD:(BOOL)showHUD
-                             progressBlock:(KLNetWorkingProgress)progressBlock
-                              successBlock:(KLResponseSuccessBlock)successBlock
-                                 failBlock:(KLResponseFailBlock)failBlock;
++ (KLURLSessionTask *)uploadWithImages:(NSArray<UIImage *> *)images
+                                 video:(NSArray <NSURL *>*)videos
+                                   url:(NSString *)url
+                                params:(NSDictionary *)params
+                               showHUD:(BOOL)showHUD
+                         progressBlock:(KLNetWorkingProgress)progressBlock
+                          successBlock:(KLResponseSuccessBlock)successBlock
+                             failBlock:(KLResponseFailBlock)failBlock;
 
 /**
  *  文件上传接口

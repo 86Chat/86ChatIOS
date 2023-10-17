@@ -10,7 +10,5 @@
 @implementation ObjectModel
 
 @end
-@implementation ConversationModel
 
-@end
 

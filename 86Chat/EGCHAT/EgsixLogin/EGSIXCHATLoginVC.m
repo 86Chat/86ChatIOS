@@ -57,7 +57,8 @@
     [_eogcsaioxScrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close)]];
     
     _eogcsaioxSendcodeButton.hidden = YES;
-    _eogcsaioxLoginButton.userInteractionEnabled = NO;
+//    _eogcsaioxLoginButton.userInteractionEnabled = NO;
+    _eogcsaioxLoginButton.userInteractionEnabled = YES;
     WS(weakself)
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         weakself.eogcsaioxLineLeft.constant = (WIDTH - 30.0) / 4.0 - 13.0;
@@ -80,22 +81,23 @@
     
     [self preferredStatusBarStyle];
 }
-    
+ 
 - (IBAction)eogcsaioxLogin:(UIButton *)sender {
     [self.view endEditing:YES];
-    _eogcsaioxAccountTF.text = @"18508248863";
-    _eogcsaioxPasswordTF.text = @"111222jry";
+    _eogcsaioxAccountTF.text = @"13800000020";
+    _eogcsaioxPasswordTF.text = @"123456";
 
     if ([self eogcsaioxIIsValid]) {
         return;
     }
 //    WS(weakself)
     if (_eogcsaioxType == 0) { // 密码登录
-//        [KLNetworkHandler requestWithUrl:LOGIN_LOGIN params:@{@"phone":_eogcsaioxAccountTF.text, @"password":_eogcsaioxPasswordTF.text} showHUD:YES httpMedthod:KLNetWorkMethodPOST successBlock:^(id responseObj) {
+        [KLNetworkHandler requestWithUrl:PUB_LOGIN params:@{@"account":_eogcsaioxAccountTF.text, @"password":_eogcsaioxPasswordTF.text} showHUD:YES httpMedthod:KLNetWorkMethodPOST successBlock:^(id responseObj) {
+            
 //            NSString *app_token = responseObj[@"data"][@"app_token"];
 //            [weakself loginSuccess:app_token];
-//        }failBlock:^(NSError *error) {
-//        }];
+        }failBlock:^(NSError *error) {
+        }];
     }else { // 验证码登录
 //        [KLNetworkHandler requestWithUrl:LOGIN_CODE_LOGIN params:@{@"phone":_eogcsaioxAccountTF.text, @"code":_eogcsaioxPasswordTF.text} showHUD:YES httpMedthod:KLNetWorkMethodPOST successBlock:^(id responseObj) {
 //
@@ -109,6 +111,39 @@
 //        }];
     }
 }
+/**
+{
+    code = 0;
+    count = 0;
+    data =     {
+        authToken = "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbmZvIjoiUUVpQVhRaWFlcnhaaW5mUXpaSHdFYnVKVTRBU0N0NFJpT2NXVFNkcDM5RjdNbWNISWswZW5LYkgwREVIVkZhSE9rZWs1RDlBRkN2XC9MTk0xZlJ2YjFzQjBNS0NnR29CdTBiclRGWjBzQTRYbjFOTDgrTUpXZjByUGlPTDYzblJ3Z1lWS2sxd1VoR1RsXC9tbmlCeTFBVHY5M0M2c0ZqMWlzb1lEMFBHMkhCVVJ3ZlpqV1Y1bEZ4RVFpXC96RHhMRjVSWlJsSnhCUHNFSk5aMlpxc1l4RHp5MGJTbVwvTlRNK2R6bUJha29tamR2dVFBK1NRZXpGVVwvcERiWiszWTBrTjVhS0w5OXlHYWE1UnhLU1RDQlhCSW5yeHF3OUJrUFlneVJ1WUdNWERaeGZqbElBRVlGUHVCdzErVkVQUnpxcW1Xa0ptSlkzR3luMEJlcnlqb2hRY2tiY1JMUFhLMUxxVG05blFoNGIwT0VDb0t5S1locVRsanBTN1NZRW90UXlzZ1hCcXJDVjhDVDlvYjJoMWw0TXJJMExMVEVlMmJhZmc0RGZqOW5vZUQxWEpxSUpISlFFNDVkTzJ6Ykc1SFhndndlajBXQVVaRVNKUHJzXC96Ukc0bVVOVmNWYWxiYnd3bEF4czk1YzBsV29QK0dReUJrUnpsY05jcHJDM0V2eHFHZVQrd1BPVUNDOE9DQ3BLbXlDYWVVdnlHTDJ6TXhzcXZyUTBGQnZzYWdMQTVid1JyUEpEWTVJRWhpbUJLbTd0Q08wIiwidGVybWluYWwiOiJ3ZWIiLCJhdWQiOiIiLCJleHAiOjE3MDAwMzg4NjksImlhdCI6MTY5NzQ0Njg2OSwiaXNzIjoiIiwianRpIjoiZDhmZWZkZTBkNWNjYWMwYmJjZDMyMmIyNjRhNDk4YzMiLCJuYmYiOjE2OTc0NDY4NjksInN1YiI6IiJ9.H5AFDGTH6ohGq-9j4XzNnn4Qhd5oIcprGKw2yHF3GYU";
+        sessionId = ae0f80281057d24cd6bc98d0d4e6ed43;
+        userInfo =         {
+            account = 13800000020;
+            avatar = "http://api.866chat.com/avatar/\U5415\U5e03/80/20";
+            "delete_time" = 0;
+            displayName = "\U5415\U5e03";
+            email = "lvbu@qq.com";
+            id = 20;
+            "is_auth" = 0;
+            "last_login_ip" = "171.223.193.72";
+            "last_login_time" = 1697446687;
+            motto = "<null>";
+            "name_py" = lvbu;
+            qrUrl = "http://api.866chat.com/scan/u/mAwRb6KOMnpk";
+            realname = "\U5415\U5e03";
+            remark = "";
+            role = 0;
+            setting = "<null>";
+            sex = 2;
+            status = 1;
+            "user_id" = 20;
+        };
+    };
+    msg = "\U767b\U5f55\U6210\U529f\Uff01";
+    page = 1;
+}
+ */
 - (void)loginSuccess:(NSString *)app_token {
     if (app_token.length > 0) {
         [[NSUserDefaults standardUserDefaults] setValue:app_token forKey:@"APP_TOKEN"];
@@ -200,11 +235,11 @@
         return YES;
     }
     if (_eogcsaioxType == 0) {
-        if (![_eogcsaioxPasswordTF.text checkPassword]) {
-            [SVProgressHUD showErrorWithStatus:@"请输入6-16位数字、字母组合"];
-            [SVProgressHUD dismissWithDelay:1.0];
-            return YES;
-        }
+//        if (![_eogcsaioxPasswordTF.text checkPassword]) {
+//            [SVProgressHUD showErrorWithStatus:@"请输入6-16位数字、字母组合"];
+//            [SVProgressHUD dismissWithDelay:1.0];
+//            return YES;
+//        }
     }else {
         if (_eogcsaioxPasswordTF.text.length < 4) {
             [SVProgressHUD showErrorWithStatus:_eogcsaioxPasswordTF.placeholder];

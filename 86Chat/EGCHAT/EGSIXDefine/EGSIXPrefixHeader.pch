@@ -19,7 +19,7 @@
 #import <MJExtension/MJExtension.h>
 #import <MJRefresh/MJRefresh.h>
 #import <HyphenateChat/HyphenateChat.h>
-//#import <EaseIMKit/EaseIMKit.h>
+#import "EaseIMKit.h"
 
 #import "APIMacro.h"
 #import "EGSIXDefine.h"

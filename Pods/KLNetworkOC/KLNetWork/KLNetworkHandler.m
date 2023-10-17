@@ -14,7 +14,7 @@
 #import "SVProgressHUD.h"
 
 // 默认超时时间
-#define TL_REQUEST_TIMEOUT 20.f
+#define TL_REQUEST_TIMEOUT 30.0
 
 #pragma mark - 网络请求配置类
 @interface KLNetworkManager ()
@@ -145,8 +145,9 @@ static KLNetworkStatus     networkStatus;
                                                                               @"text/javascript",
                                                                               @"text/xml",
                                                                               @"image/*"]];
-    
-    manager.requestSerializer.timeoutInterval = [KLNetworkManager sharedManager].requestTimeout;
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+//    manager.requestSerializer.timeoutInterval = [KLNetworkManager sharedManager].requestTimeout;
+    manager.requestSerializer.timeoutInterval = TL_REQUEST_TIMEOUT;
     
     [self detectNetworkStaus];
     if ([self totalCacheSize] > MAX_CACHE_SIZE) [self clearCaches];
@@ -216,12 +217,22 @@ static KLNetworkStatus     networkStatus;
     if (showHUD == YES) {
         [SVProgressHUD show];
     }
+    NSLog(@"\nurl==%@\nparams==%@",url, params);
     
     AFHTTPSessionManager *sessionManager = [self manager];
     KLURLSessionTask *sessionTask;
     
+    
+    NSMutableDictionary *httpHeader = NSMutableDictionary.new;
+    [httpHeader setValue:@"apifox/1.0.0 (https://www.apifox.cn)" forKey:@"User-Agent"];
+    
+    [self configHttpHeaders:httpHeader];
+    
     // 请求前先判断是否有网络
     if (networkStatus == KLNetworkStatusNotReachable ||  networkStatus == KLNetworkStatusUnknown) {
+        // 隐藏请求HUD
+        [SVProgressHUD dismiss];
+        [[DSToast toastWithText:@"无网络"] show];
         failBlock ? failBlock(KL_ERROR) : nil;
         return nil;
     }
@@ -234,12 +245,13 @@ static KLNetworkStatus     networkStatus;
             // 隐藏请求HUD
             [SVProgressHUD dismiss];
             // 判断请求接口是否成功（api_code = 0）
-            if ([responseObject[@"api_code"] integerValue] == 0) {
+            if ([responseObject[@"code"] integerValue] == 0) {
                 successBlock ? successBlock(responseObject) : nil;
-            }else{
+            }else {
                 failBlock ? failBlock(nil) : nil;
-                [[DSToast toastWithText:responseObject[@"api_message"]] show];
+                [[DSToast toastWithText:responseObject[@"msg"]] show];
             }
+            NSLog(@"\nresponseObject====%@",responseObject);
             // 移除当前请求
             [[self allTasks] removeObject:task];
             
@@ -248,7 +260,7 @@ static KLNetworkStatus     networkStatus;
             [SVProgressHUD dismiss];
             // 移除当前请求
             [[self allTasks] removeObject:task];
-            
+            [task cancel];
         }];
     }
     // post会话请求
@@ -260,12 +272,13 @@ static KLNetworkStatus     networkStatus;
             // 隐藏请求HUD
             [SVProgressHUD dismiss];
             // 判断请求接口是否成功（api_code = 0）
-            if ([responseObject[@"api_code"] integerValue] == 0) {
+            if ([responseObject[@"code"] integerValue] == 0) {
                 successBlock ? successBlock(responseObject) : nil;
             }else{
                 failBlock ? failBlock(nil) : nil;
-                [[DSToast toastWithText:responseObject[@"api_message"]] show];
+                [[DSToast toastWithText:responseObject[@"msg"]] show];
             }
+            NSLog(@"\nresponseObject====%@",responseObject);
             // 移除当前请求
             [[self allTasks] removeObject:task];
             
@@ -274,77 +287,10 @@ static KLNetworkStatus     networkStatus;
             [SVProgressHUD dismiss];
             // 移除当前请求
             [[self allTasks] removeObject:task];
+            [task cancel];
         }];
     }
-    // patch会话请求
-    else if (httpMethod == KLNetWorkMethodPATCH){
-        
-        sessionTask = [sessionManager PATCH:url parameters:params headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            // 隐藏请求HUD
-            [SVProgressHUD dismiss];
-            // 判断请求接口是否成功（api_code = 0）
-            if ([responseObject[@"api_code"] integerValue] == 0) {
-                successBlock ? successBlock(responseObject) : nil;
-            }else{
-                failBlock ? failBlock(nil) : nil;
-                [[DSToast toastWithText:responseObject[@"api_message"]] show];
-            }
-            // 移除当前请求
-            [[self allTasks] removeObject:task];
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            // 隐藏请求HUD
-            [SVProgressHUD dismiss];
-            // 移除当前请求
-            [[self allTasks] removeObject:task];
-        }];
-    }
-    // put 会话请求
-    else if (httpMethod == KLNetWorkMethodPUT){
-        
-        sessionTask = [sessionManager PUT:url parameters:params headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            // 隐藏请求HUD
-            [SVProgressHUD dismiss];
-            // 判断请求接口是否成功（api_code = 0）
-            if ([responseObject[@"api_code"] integerValue] == 0) {
-                successBlock ? successBlock(responseObject) : nil;
-            }else{
-                failBlock ? failBlock(nil) : nil;
-                [[DSToast toastWithText:responseObject[@"api_message"]] show];
-            }
-            // 移除当前请求
-            [[self allTasks] removeObject:task];
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            // 隐藏请求HUD
-            [SVProgressHUD dismiss];
-            // 移除当前请求
-            [[self allTasks] removeObject:task];
-        }];
-    }
-    // delete 会话请求
-    else if (httpMethod == KLNetWorkMethodDELETE){
-        
-        sessionTask = [sessionManager DELETE:url parameters:params headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            // 隐藏请求HUD
-            [SVProgressHUD dismiss];
-            // 判断请求接口是否成功（api_code = 0）
-            if ([responseObject[@"api_code"] integerValue] == 0) {
-                successBlock ? successBlock(responseObject) : nil;
-            }else{
-                failBlock ? failBlock(nil) : nil;
-                [[DSToast toastWithText:responseObject[@"api_message"]] show];
-            }
-            // 移除当前请求
-            [[self allTasks] removeObject:task];
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            // 隐藏请求HUD
-            [SVProgressHUD dismiss];
-            // 移除当前请求
-            [[self allTasks] removeObject:task];
-        }];
-    }
+    
     // 将当前请求加入请求数组中
     if (sessionTask) {
         [requestTasks addObject:sessionTask];
@@ -356,8 +302,9 @@ static KLNetworkStatus     networkStatus;
 /**
  *  多图片上传接口
  *
- *    @param imageArray       图片对象集合
- *  @param url              请求路径
+ *    @param images       图片对象集合
+ *    @param videos       视频对象集合
+ *    @param url              请求路径
  *    @param params           拼接参数
  *    @param progressBlock    上传进度
  *    @param successBlock     成功回调
@@ -365,55 +312,86 @@ static KLNetworkStatus     networkStatus;
  *
  *  @return 返回的对象中可取消请求
  */
-+ (KLURLSessionTask *)uploadWithImageArray:(NSMutableArray *)imageArray
-                                       url:(NSString *)url
-                                    params:(NSDictionary *)params
-                                   showHUD:(BOOL)showHUD
-                             progressBlock:(KLNetWorkingProgress)progressBlock
-                              successBlock:(KLResponseSuccessBlock)successBlock
-                                 failBlock:(KLResponseFailBlock)failBlock{
-    
-    
++ (KLURLSessionTask *)uploadWithImages:(NSArray<UIImage *> *)images
+                                 video:(NSArray <NSURL *>*)videos
+                                   url:(NSString *)url
+                                params:(NSDictionary *)params
+                               showHUD:(BOOL)showHUD
+                         progressBlock:(KLNetWorkingProgress)progressBlock
+                          successBlock:(KLResponseSuccessBlock)successBlock
+                             failBlock:(KLResponseFailBlock)failBlock {
     
     AFHTTPSessionManager *manager = [self manager];
-    KLURLSessionTask *session = [manager POST:url parameters:params headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [manager.requestSerializer setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
+    // 头部设置 - 开始
+        NSMutableDictionary *httpHeader = NSMutableDictionary.new;
+        [httpHeader setValue:@"apifox/1.0.0 (https://www.apifox.cn)" forKey:@"User-Agent"];
         
+        NSInteger timestamp = (NSInteger)[[NSDate date] timeIntervalSince1970];
+        [httpHeader setValue:[NSString stringWithFormat:@"%ld",timestamp] forKey:@"timestamp"];
+//        [httpHeader setValue:[self accessToken:url timestamp:timestamp] forKey:@"access-token"];
+        
+        NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"APP_TOKEN"];
+        if (token != nil && token.length > 0) {
+            [httpHeader setValue:token forKey:@"token"];
+        }
+        [self configHttpHeaders:httpHeader];
+    // 头部设置 - 结束
+    
+    // 请求前先判断是否有网络
+    if (networkStatus == KLNetworkStatusNotReachable ||  networkStatus == KLNetworkStatusUnknown) {
+        // 隐藏请求HUD
+        [SVProgressHUD dismiss];
+        [DSToast toastWithText:@"无网络"];
+        failBlock ? failBlock(KL_ERROR) : nil;
+        return nil;
+    }
+    
+    KLURLSessionTask *session = [manager POST:url parameters:params headers:headers constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         // 判断是否有图片数据
-        if (!imageArray.count) {
-            NSLog(@"图片数组为空");
+        if (images.count == 0 && videos.count == 0) {
+            NSLog(@"资源文件为空");
         }
-        // 循环添加数据
-        for (id _Nullable uploadFile in imageArray) {
-            if ([uploadFile isKindOfClass:[KLUploadParam class]]) {
-                
-                KLUploadParam *uploadParam = (KLUploadParam *)uploadFile;
-                [formData appendPartWithFileData:uploadParam.data name:uploadParam.paramKey
-                                        fileName:uploadParam.fileName mimeType:uploadParam.mimeType];
-            }else{
-                NSLog(@"文件数组不是TLUploadParam对象，请检查文件数组类型");
-                return;
-            }
-        }
-    } progress:^(NSProgress * _Nonnull uploadProgress) {
         
+        for (UIImage *img in images) {
+            NSData *data = UIImageJPEGRepresentation(img, 0.3);
+            [formData appendPartWithFileData:data name:@"file" fileName:@"image.png" mimeType:@"image/jpeg"];
+        }
+        for (NSURL *url in videos) {
+            NSData *videoData = [NSData dataWithContentsOfURL:url];
+            [formData appendPartWithFileData:videoData name:@"file" fileName:@"video.mp4" mimeType:@"video/mp4"];
+        }
+        // 循环添加数据 - KL自带的上传方式
+//        for (id _Nullable uploadFile in imageArray) {
+//            if ([uploadFile isKindOfClass:[KLUploadParam class]]) {
+//
+//                KLUploadParam *uploadParam = (KLUploadParam *)uploadFile;
+//                [formData appendPartWithFileData:uploadParam.data name:uploadParam.paramKey
+//                                        fileName:uploadParam.fileName mimeType:uploadParam.mimeType];
+//            }else{
+//                NSLog(@"文件数组不是TLUploadParam对象，请检查文件数组类型");
+//                return;
+//            }
+//        }
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progressBlock) {
             progressBlock(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
         }
         if (showHUD) {
             [SVProgressHUD showProgress:uploadProgress.fractionCompleted];
         }
-        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [SVProgressHUD dismiss];
         // 判断请求接口是否成功（api_code = 0）
-        if ([responseObject[@"api_code"] integerValue] == 0) {
+        if ([responseObject[@"code"] integerValue] == 0) {
             successBlock ? successBlock(responseObject) : nil;
         }else{
             failBlock ? failBlock(nil) : nil;
-            [[DSToast toastWithText:responseObject[@"api_message"]] show];
+            [[DSToast toastWithText:responseObject[@"msg"]] show];
         }
-        
+        NSLog(@"\nurl==%@\nparams==%@\nresponseObject==%@",url, params, responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failBlock ? failBlock(error) : nil;
         
@@ -426,7 +404,6 @@ static KLNetworkStatus     networkStatus;
     if (session) {
         [[self allTasks] addObject:session];
     }
-    
     return session;
 }
 
