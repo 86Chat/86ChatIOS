@@ -16,11 +16,11 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconCollectionHeight;
 @property (weak, nonatomic) IBOutlet UICollectionView *iconCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *iconLayout;
-@property(nonatomic, strong) NSMutableArray<EMUserInfo *> *iconArray;
+@property(nonatomic, strong) NSMutableArray<ObjectModel *> *iconArray;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *oxgcseoaiCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *oxgcseoaiLayout;
-@property(nonatomic, strong) NSMutableArray<EMUserInfo *> *oxgcseoais;
+@property(nonatomic, strong) NSMutableArray<ObjectModel *> *oxgcseoais;
 
 @property (weak, nonatomic) IBOutlet UIButton *oxgcseoaiOkButton;
 
@@ -57,17 +57,7 @@
 - (void)requestData {
     [self.oxgcseoais removeAllObjects];
     
-    NSArray *aList = [EMClient.sharedClient.contactManager getContacts];
-    WS(weakself)
-    [EMClient.sharedClient.userInfoManager fetchUserInfoById:aList completion:^(NSDictionary * _Nullable aUserDatas, EMError * _Nullable aError) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            for (NSString *user in aList) {
-                EMUserInfo *userInfo = aUserDatas[user];
-                [weakself.oxgcseoais addObject:userInfo];
-            }
-            [weakself.oxgcseoaiCollectionView reloadData];
-        });
-    }];
+    
 }
 
 - (IBAction)oxgcseoaiOk:(UIButton *)sender {
@@ -99,11 +89,11 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView == _iconCollectionView) {
         HESIXCGATContactIconCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HESIXCGATContactIconCVCell" forIndexPath:indexPath];
-        [cell.oxgcseoaiIconView sd_setImageWithURL:URL(_iconArray[indexPath.row].avatarUrl) placeholderImage:IMAGENAME(@"eogcsaioxIcon")];
+//        [cell.oxgcseoaiIconView sd_setImageWithURL:URL(_iconArray[indexPath.row].avatarUrl) placeholderImage:IMAGENAME(@"eogcsaioxIcon")];
         return cell;
     }
     HESIXCGATContactInfoCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HESIXCGATContactInfoCVCell" forIndexPath:indexPath];
-    cell.userInfo = self.oxgcseoais[indexPath.row];
+//    cell.userInfo = self.oxgcseoais[indexPath.row];
     
     cell.oxgcseoaiSelectButton.tag = indexPath.row;
     [cell.oxgcseoaiSelectButton addTarget:self action:@selector(oxgcseoaiSelect:) forControlEvents:UIControlEventTouchUpInside];
@@ -121,26 +111,26 @@
 - (void)oxgcseoaiSelect:(UIButton *)sender {
     sender.selected = !sender.selected;
     
-    EMUserInfo *userInfo = self.oxgcseoais[sender.tag];
-    userInfo.ext = (sender.selected ? @"1" : @"0");
-    
-    if (sender.selected) {
-        [self.iconArray addObject:userInfo];
-    }else {
-        [self.iconArray removeObject:userInfo];
-    }
+//    EMUserInfo *userInfo = self.oxgcseoais[sender.tag];
+//    userInfo.ext = (sender.selected ? @"1" : @"0");
+//
+//    if (sender.selected) {
+//        [self.iconArray addObject:userInfo];
+//    }else {
+//        [self.iconArray removeObject:userInfo];
+//    }
     [_iconCollectionView reloadData];
     _iconCollectionHeight.constant = 70.0 * MIN(self.iconArray.count, 1);
     [_oxgcseoaiOkButton setTitle:UNString(@"确定(%ld)", self.iconArray.count) forState:UIControlStateNormal];
 }
 
 
-- (NSMutableArray<EMUserInfo *> *)iconArray {
+- (NSMutableArray<ObjectModel *> *)iconArray {
     if (!_iconArray) {
         _iconArray = NSMutableArray.new;
     }return _iconArray;
 }
-- (NSMutableArray<EMUserInfo *> *)oxgcseoais {
+- (NSMutableArray<ObjectModel *> *)oxgcseoais {
     if (!_oxgcseoais) {
         _oxgcseoais = NSMutableArray.new;
     }return _oxgcseoais;

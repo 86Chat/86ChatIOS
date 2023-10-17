@@ -35,17 +35,7 @@
     ViewRadius(_oxgcseoaiTitleView, 15.0);
     ViewRadius(_oxgcseoaiGroupView, 20.0);
     
-    NSString *currentUsername = EMClient.sharedClient.currentUsername;
-    WS(weakself)
-    [EMClient.sharedClient.userInfoManager fetchUserInfoById:@[currentUsername] completion:^(NSDictionary * _Nullable aUserDatas, EMError * _Nullable aError) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            EMUserInfo *userInfo = aUserDatas[currentUsername];
-            [weakself.oxgcseoais insertObject:userInfo atIndex:0];
-            
-            [weakself.oxgcseoaiCollectionView reloadData];
-        });
-    }];
-    _oxgcseoaiTitleTF.placeholder = [NSString stringWithFormat:@"%@、%@",_oxgcseoais.firstObject.userId, _oxgcseoais[1].userId];
+//    _oxgcseoaiTitleTF.placeholder = [NSString stringWithFormat:@"%@、%@",_oxgcseoais.firstObject.userId, _oxgcseoais[1].userId];
     
     _oxgcseoaiLayout.sectionInset = UIEdgeInsetsMake(0.0, 10.0, 0.0, 10.0);
     _oxgcseoaiLayout.itemSize = CGSizeMake(60.0, 60.0);
@@ -75,28 +65,15 @@
 }
 
 - (void)createGroup {
-    NSMutableArray *userIds = NSMutableArray.new;
-    for (NSInteger i = 0; i < self.oxgcseoais.count; i ++) {
-        if (i == 0) {
-            continue;
-        }
-        [userIds addObject:self.oxgcseoais[i].userId];
-    }
+//    NSMutableArray *userIds = NSMutableArray.new;
+//    for (NSInteger i = 0; i < self.oxgcseoais.count; i ++) {
+//        if (i == 0) {
+//            continue;
+//        }
+//        [userIds addObject:self.oxgcseoais[i].userId];
+//    }
 
-    EMGroupOptions *options = [[EMGroupOptions alloc] init];
-    // 设置群组最大成员数量。
-    options.maxUsers = 100;
-    // 设置 `IsInviteNeedConfirm` 为 `YES`，则邀请用户入群需要用户确认。
-    options.IsInviteNeedConfirm = YES;
-    // 设置群组类型。此处示例为成员可以邀请用户入群的私有群组。
-    options.style = EMGroupStylePrivateMemberCanInvite;
-    // 调用 `createGroupWithSubject` 创建群组。同步方法，异步方法见 [EMGroupManager createGroupWithSubject:description:invitees:message:setting:completion:]
-    [EMClient.sharedClient.groupManager createGroupWithSubject:_oxgcseoaiTitleTF.text
-                             description:@"description"
-                             invitees:userIds
-                            message:UNString(@"%@邀请您加入群聊", self.oxgcseoais.firstObject.userId)
-                             setting:options
-                             error:nil];
+
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -107,7 +84,7 @@
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HESIXCGATAddGroupCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HESIXCGATAddGroupCVCell" forIndexPath:indexPath];
-    cell.userInfo = self.oxgcseoais[indexPath.row];
+//    cell.userInfo = self.oxgcseoais[indexPath.row];
     return cell;
 }
 

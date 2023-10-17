@@ -26,11 +26,11 @@
     ViewRadius(_oxgcseoaiIconView, 25.0)
 }
 
-- (void)setModel:(EMConversation *)model {
-    _model = model;
-    
+//- (void)setModel:(EMConversation *)model {
+//    _model = model;
+//    
 //    _oxgcseoaiIconView sd_setImageWithURL:URL(_model.a)
-    
-}
+//    
+//}
 
 @end

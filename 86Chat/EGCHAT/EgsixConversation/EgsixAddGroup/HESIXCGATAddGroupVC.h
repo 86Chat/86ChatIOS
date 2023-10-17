@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HESIXCGATAddGroupVC : EGSIXCHATMainVC
 
-@property (nonatomic, strong) NSMutableArray<EMUserInfo *> *oxgcseoais;
+@property (nonatomic, strong) NSMutableArray<ObjectModel *> *oxgcseoais;
 
 @end
 

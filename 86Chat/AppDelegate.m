@@ -28,25 +28,6 @@
     
     [self setupIQKeyboardManager];
     
-// appkey 替换成你在环信即时通讯 IM 管理后台注册应用中的 App Key
-    EMOptions *options = [EMOptions optionsWithAppkey:HX_APPKEY];
-    // apnsCertName是证书名称，可以先传 nil，等后期配置 APNs 推送时在传入证书名称
-    options.apnsCertName = nil;
-    options.isAutoLogin = YES;
-    [EMClient.sharedClient initializeSDKWithOptions:options];
-    
-//    [EMClient.sharedClient logout:YES completion:^(EMError * _Nullable aError) {
-        
-        EMError *error = [EMClient.sharedClient loginWithUsername:@"test1" password:@"123456"];
-        if (error != nil) {
-            NSLog(@"%@",error.errorDescription);
-        }
-//    }];
-//        if (error != nil) {
-//            NSLog(@"%@",error.errorDescription);
-//        }
-    
-    
 
     [self enterRootViewController];
     return YES;

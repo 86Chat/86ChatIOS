@@ -34,18 +34,7 @@
         [SVProgressHUD dismissWithDelay:1.0];
         return;
     }
-    EMError *aError = [EMClient.sharedClient.contactManager addContact:_oxgcseoaiTitleTF.text message:@"请求添加您为好友"];
-    if (aError == nil) { // 添加好友成功
-        [SVProgressHUD showSuccessWithStatus:@"已为您提交申请..."];
-        [SVProgressHUD dismissWithDelay:1.0];
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.navigationController popToRootViewControllerAnimated:YES];
-        });
-    }else {
-        [SVProgressHUD showErrorWithStatus:aError.errorDescription];
-        [SVProgressHUD dismissWithDelay:1.0];
-    }
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HESIXCGATContactInfoCVCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIButton *oxgcseoaiSelectButton;
-@property (nonatomic, strong) EMUserInfo *userInfo;
+//@property (nonatomic, strong) EMUserInfo *userInfo;
 
 @end
 

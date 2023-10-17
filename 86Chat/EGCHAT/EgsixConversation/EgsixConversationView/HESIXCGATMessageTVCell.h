@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HESIXCGATMessageTVCell : UITableViewCell
 
-@property (nonatomic, strong) EMConversation *model;
+//@property (nonatomic, strong) EMConversation *model;
 
 @end
 

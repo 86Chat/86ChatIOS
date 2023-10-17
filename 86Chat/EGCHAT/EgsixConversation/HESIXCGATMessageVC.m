@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *oxgcseoaiSearchTF;
 
 @property (weak, nonatomic) IBOutlet UITableView *oxgcseoaiTableView;
-@property (nonatomic, strong) NSMutableArray<EMConversation *> *dataArray;
+@property (nonatomic, strong) NSMutableArray<ObjectModel *> *dataArray;
 
 @end
 
@@ -45,35 +45,6 @@
 }
 
 - (void)oxgcseoaiAdd {
-    
-//    for (NSString *user in @[@"test2", @"AAB", @"AAC", @"AAD", @"AAE", @"AAF", @"AAG"]) {
-//        // 同意好友申请。
-//        [[EMClient sharedClient].contactManager approveFriendRequestFromUser:user completion:^(NSString *aUsername, EMError *aError) {
-//            if (!aError) {
-//                NSLog(@"同意加好友申请成功");
-//            } else {
-//                NSLog(@"同意加好友申请失败的原因 --- %@", aError.errorDescription);
-//            }
-//        }];
-//    }
-    
-    
-    
-    
-//    // 创建消息
-//    EMTextMessageBody* textBody = [[EMTextMessageBody alloc] initWithText:@"hello ruby"];
-//    EMChatMessage *message = [[EMChatMessage alloc] initWithConversationID:@"test1"
-//                                                                  from:@"test1"
-//                                                                    to:@"AAB"
-//                                                                  body:textBody
-//                                                                   ext:@{}];
-//    // 发送消息
-//    [[EMClient sharedClient].chatManager sendMessage:message progress:nil completion:^(EMChatMessage *message, EMError *error) {
-//        NSLog(@"error = %@",error.errorDescription);
-//    }];
-
-    
-    return;
     [_oxgcseoaiSearchTF resignFirstResponder];
     
     MessageAddPopView *popView = [[MessageAddPopView alloc] init];
@@ -96,23 +67,6 @@
     [self.dataArray removeAllObjects];
     [self refreshEndStatus:self.oxgcseoaiTableView];
     
-//    _dataArray = [EMClient.sharedClient.chatManager getAllConversations:YES].mutableCopy;
-//    WS(weakself)
-//    [EMClient.sharedClient.contactManager getContactsFromServerWithCompletion:^(NSArray<NSString *> * _Nullable aList, EMError *aError_Nullable) {
-//        NSLog(@"aList===%@",aList);
-//        [EMClient.sharedClient.userInfoManager fetchUserInfoById:aList completion:^(NSDictionary * _Nullable aUserDatas, EMError * _Nullable aError) {
-//            NSLog(@"aUserDatas==%@",aUserDatas);
-//            NSLog(@"aab==%@",aUserDatas[@"aab"]);
-//        }];
-//    }];
-    
-    for (EMConversation *conversation in [EMClient.sharedClient.chatManager getAllConversations:YES]) {
-//        ConversationModel *model = [ConversationModel mj_objectWithKeyValues:conversation.mj_JSONObject];
-
-        [EMClient.sharedClient.userInfoManager fetchUserInfoById:@[conversation.conversationId] completion:^(NSDictionary * _Nullable aUserDatas, EMError * _Nullable aError) {
-            NSLog(@"aUserDatas===%@",aUserDatas);
-        }];
-    }
     
     
     
@@ -192,7 +146,7 @@
 }
 
 
-- (NSMutableArray<EMConversation *> *)dataArray {
+- (NSMutableArray<ObjectModel *> *)dataArray {
     if (!_dataArray) {
         _dataArray = NSMutableArray.new;
     }return _dataArray;

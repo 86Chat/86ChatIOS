@@ -21,12 +21,12 @@
     ViewRadius(_oxgcseoaiIconView, 20.0);
 }
 
-- (void)setUserInfo:(EMUserInfo *)userInfo {
-    _userInfo = userInfo;
-    
-    _oxgcseoaiSelectButton.selected = (_userInfo.ext.integerValue == 1);
-    [_oxgcseoaiIconView sd_setImageWithURL:URL(_userInfo.avatarUrl) placeholderImage:IMAGENAME(@"eogcsaioxIcon")];
-    _oxgcseoaiNameLabel.text = _userInfo.userId;
-}
+//- (void)setUserInfo:(EMUserInfo *)userInfo {
+//    _userInfo = userInfo;
+//    
+//    _oxgcseoaiSelectButton.selected = (_userInfo.ext.integerValue == 1);
+//    [_oxgcseoaiIconView sd_setImageWithURL:URL(_userInfo.avatarUrl) placeholderImage:IMAGENAME(@"eogcsaioxIcon")];
+//    _oxgcseoaiNameLabel.text = _userInfo.userId;
+//}
 
 @end

@@ -21,11 +21,11 @@
     ViewRadius(_oxgcseoaiIconView, 20.0);
 }
 
-- (void)setUserInfo:(EMUserInfo *)userInfo {
-    _userInfo = userInfo;
-    
-    [_oxgcseoaiIconView sd_setImageWithURL:URL(_userInfo.avatarUrl) placeholderImage:IMAGENAME(@"eogcsaioxIcon")];
-    _oxgcseoaiNameLabel.text = _userInfo.userId;
-}
+//- (void)setUserInfo:(EMUserInfo *)userInfo {
+//    _userInfo = userInfo;
+//    
+//    [_oxgcseoaiIconView sd_setImageWithURL:URL(_userInfo.avatarUrl) placeholderImage:IMAGENAME(@"eogcsaioxIcon")];
+//    _oxgcseoaiNameLabel.text = _userInfo.userId;
+//}
 
 @end

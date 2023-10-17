@@ -10,9 +10,6 @@ target '86Chat' do
   pod 'SDWebImage'
   pod 'IQKeyboardManager'
 
-  pod 'HyphenateChat' # 环信的SDK
-  # IM的UI要用到
-  pod 'EMVoiceConvert', '0.1.0'
   
   
   

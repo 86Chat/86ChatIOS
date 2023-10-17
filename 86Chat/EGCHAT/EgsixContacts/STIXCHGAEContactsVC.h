@@ -5,11 +5,11 @@
 //  Created by Rubyuer on 10/12/23.
 //
 
-#import "EaseContactsViewController.h"
+#import "EGSIXCHATMainVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface STIXCHGAEContactsVC : EaseContactsViewController
+@interface STIXCHGAEContactsVC : EGSIXCHATMainVC
 
 @end
 
